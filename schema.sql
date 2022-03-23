@@ -24,8 +24,7 @@ CREATE TABLE owners (
 -- Create a table named species.
 CREATE TABLE species (
 	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY NOT NULL,
-	name VARCHAR(255),
-	age INT
+	name VARCHAR(255)
 );
 
 -- Modify animals table:
