@@ -65,3 +65,29 @@ ALTER TABLE
 	animals
 ADD
 	CONSTRAINT owner_id FOREIGN KEY(owner_id) REFERENCES owners(id);
+
+-- MILESTONE 4
+-- Create a table named vets 
+CREATE TABLE vets (
+	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
+	name VARCHAR(255),
+	age INT,
+	date_of_graduation DATE
+);
+
+-- There is a many-to-many relationship between the tables species and vets: a vet can specialize in multiple species, and a species can have multiple vets specialized in it. Create a "join table" called specializations to handle this relationship.
+CREATE TABLE specializations (
+	species_id INT,
+	vets_id INT,
+	FOREIGN KEY(species_id) REFERENCES species(id),
+	FOREIGN KEY(vets_id) REFERENCES vets(id)
+);
+
+-- There is a many-to-many relationship between the tables animals and vets: an animal can visit multiple vets and one vet can be visited by multiple animals. Create a "join table" called visits to handle this relationship, it should also keep track of the date of the visit.
+CREATE TABLE visits (
+	animals_id INT,
+	vets_id INT,
+	date_of_visit DATE,
+	FOREIGN KEY(animals_id) REFERENCES animals(id),
+	FOREIGN KEY(vets_id) REFERENCES vets(id)
+);
