@@ -18,6 +18,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - LinkedIn: [Fernando Herrera](https://www.linkedin.com/in/fherrerao/);
 - Twitter: [Fernando Herrera](https://twitter.com/fherrera0206);
 
+👤 **Jeff Kayombo**
+
+- GitHub: [@JEFFKAY16](https://github.com/JEFFKAY16)
+- Twitter: [@jeff_kayombo](https://twitter.com/jeff_kayombo)
+- LinkedIn: [Jeff Kayombo](https://www.linkedin.com/in/jeff-kayombo/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
