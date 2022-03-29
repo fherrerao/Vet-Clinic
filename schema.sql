@@ -101,3 +101,5 @@ CREATE INDEX visits_animals_id ON visits(animals_id);
 
 -- Find a way to improve execution time of the other two queries.
 CREATE INDEX visits_vets_id ON visits(vets_id);
+
+CREATE INDEX owners_email ON visits(email);
