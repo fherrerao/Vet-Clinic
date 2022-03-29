@@ -91,3 +91,13 @@ CREATE TABLE visits (
 	FOREIGN KEY(animals_id) REFERENCES animals(id),
 	FOREIGN KEY(vets_id) REFERENCES vets(id)
 );
+
+-- DATABASE PERFORMANCE AUDIT
+-- SELECT COUNT(*) FROM visits where animal_id = 4;
+-- SELECT * FROM visits where vet_id = 2;
+-- SELECT * FROM owners where email = 'owner_18327@mail.com';
+-- Find a way to decrease the execution time of the first query. Look for hints in the previous lessons.
+CREATE INDEX visits_animals_id ON visits(animals_id);
+
+-- Find a way to improve execution time of the other two queries.
+CREATE INDEX visits_vets_id ON visits(vets_id);
